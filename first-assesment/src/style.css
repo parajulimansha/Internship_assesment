@@ -7,4 +7,27 @@
     flex-shrink: 0;
     width: 100%;
   }
+
+  .carousel-container {
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%; /* Each slide takes the full width of the container */
+    display: flex;
+    justify-content: space-between; /* Add space between cards */
+}
+
+.carousel-card {
+    flex: 1 1 19%; /* Each card takes about 19% of the slide's width */
+    margin: 0 5px; /* Add small margins between cards */
+}
+
+  
+
   

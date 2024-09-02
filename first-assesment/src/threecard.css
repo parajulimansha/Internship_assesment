@@ -1,0 +1,146 @@
+
+
+        /* Custom styles for carousel */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            height: 500px; /* Adjusted height for more space */
+        }
+
+        /* Slides wrapper styling */
+        #carouselSlides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        /* Each slide should be 100% of the container width */
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center; /* Centered the cards */
+            gap: 10px; /* Reduce gap between cards */
+        }
+
+        /* Each card should have a smaller width and taller height */
+        .carousel-slide .card {
+            width: 25%; /* Narrower width */
+            height: 400px; /* Taller height */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Blue overlay on hover */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0.2); /* Blue overlay with less opacity */
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        /* Date section to remain unchanged on hover */
+        .date {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .card {
+    position: relative;
+    width: 260px; /* Adjusted width */
+    height: 380px; /* Adjusted height */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%; /* Image takes up the entire card */
+    object-fit: cover;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    color: white;
+    padding: 16px;
+    text-align: center;
+    z-index: 2; /* Ensures content is above the image */
+}
+
+.card .date {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 3; /* Keeps the date above everything */
+}
+
+
+       
+        .card-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Dot navigation styling */
+       
+            .dots-container {
+                position: absolute;
+                bottom: 10px; /* Reduced from 20px to 10px */
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+            }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: blue;
+        }

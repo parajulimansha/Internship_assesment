@@ -74,3 +74,42 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const slides = document.querySelectorAll('.carousel-slide');
+//     const prevBtn = document.getElementById('prevBtn');
+//     const nextBtn = document.getElementById('nextBtn');
+//     let currentIndex = 0;
+
+//     // Function to show the current slide
+//     function showSlide(index) {
+//         const slideWidth = slides[0].clientWidth;
+//         document.getElementById('carouselSlides').style.transform = `translateX(-${index * slideWidth}px)`;
+//     }
+
+//     // Event listener for the Next button
+//     nextBtn.addEventListener('click', function () {
+//         currentIndex = (currentIndex + 1) % slides.length;
+//         showSlide(currentIndex);
+//     });
+
+//     // Event listener for the Previous button
+//     prevBtn.addEventListener('click', function () {
+//         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//         showSlide(currentIndex);
+//     });
+
+//     // Initial display of the first slide
+//     showSlide(currentIndex);
+// });
+
